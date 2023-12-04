@@ -14,7 +14,8 @@ const routes: Routes = [
     children: [
       //router-outletと紐づく localhost:4041の語尾に何もついていない、detailがついている等振り分ける
       { path: '', component: ProductListComponent},
-      { path: 'detail', component:ProductDetailComponent},
+      //:をつけると、動的ページとして認識される
+      { path: ':productId', component:ProductDetailComponent},
 
     ]
   },
